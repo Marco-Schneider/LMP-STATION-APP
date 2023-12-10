@@ -1,0 +1,47 @@
+body {
+background-color: #2f4046;
+}
+
+.logo-container {
+    margin-left: 2rem;
+    min-height: 50px;
+    min-width: 30vw;
+    background-image: url("media/wordart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-dark {
+    min-height: 35px;
+}
+
+.container {
+    margin-top: 4rem;
+}
+
+.card{
+    border-radius: 1px;
+}
+
+.main-card-title {
+    margin: auto;
+    color: white;
+}
+
+.status-container {
+    display: flex;
+}
+
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.inactive {
+    color: red;
+    font-weight: bold;
+}
+
+.row {
+    margin-top: 1rem;
+}
