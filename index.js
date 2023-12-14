@@ -4,7 +4,7 @@ $(document).ready(() => {
   setInterval(checarEstadoDasEsteiras, 2000);
 })
 
-var esp32Ip = "192.168.0.14";
+var esp32Ip = "10.183.42.61";
 
 var EstadoEsteira1 = "OFF"
 var EstadoEsteira2 = "OFF"
@@ -17,7 +17,7 @@ function carregarCarga1() {
     message:"1"
   }
   $.ajax({
-    url: "http://esp32Ip /post",
+    url: "http://" + esp32Ip + "/post",
     crossDomain: true,
     type: "POST",
     data: data,
@@ -36,7 +36,7 @@ function carregarCarga2() {
     message:"2"
   }
   $.ajax({
-    url: "http://esp32Ip /post",
+    url: "http://" + esp32Ip + "/post",
     crossDomain: true,
     type: "POST",
     data: data,
@@ -55,7 +55,7 @@ function carregarCarga3() {
     message:"3"
   }
   $.ajax({
-    url: "http://esp32Ip /post",
+    url: "http://" + esp32Ip + "/post",
     type: "POST",
     data: data,
     crossDomain: true,
@@ -69,8 +69,9 @@ function carregarCarga3() {
 }
 
 function checarEstadoDasEsteiras() {
+  console.log("checandoestado!");
   $.ajax({
-    url: "http://esp32Ip /status",
+    url: "http://" + esp32Ip + "/status",
     crossDomain: true,
     type: "GET",
     success: function(response) {
